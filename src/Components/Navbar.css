@@ -1,0 +1,46 @@
+.navbar
+{
+    width: 100%;
+    background-color: #212529;
+    border-radius: 0%;
+    display: flex;
+}
+.heading
+{
+    width: 20%;
+    font-size: 2rem;
+    color: white;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+}
+.menu
+{
+    width: 75%;
+    font-size: .9rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.cart
+{
+    color:white;
+   transform: scale(1.8);
+   cursor: pointer;
+}
+.count
+{
+    width: 5%;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.wishlist
+{
+  transform: scale(1.8);
+  color: white;
+  cursor: pointer;
+}

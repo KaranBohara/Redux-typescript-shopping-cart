@@ -1,0 +1,40 @@
+.wishlist-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.wishlist-courses {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.wishlist-courses-cartdetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.wishlist-subheader {
+  display: flex;
+  background-color: rgb(113, 178, 187);
+  align-items: flex-start;
+  color: white;
+  height: 50px;
+  width: 90%;
+  padding: 0px 10px;
+  border-radius: 1px;
+}
+
+.cartdetails {
+  width: 30%;
+  /* width: auto; */
+  /* position: relative; */
+  /* left: 500px; */
+}

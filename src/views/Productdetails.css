@@ -1,0 +1,46 @@
+.viewpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.details-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.redirecttohome {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 70px;
+  font-size: 23px;
+}
+
+.detailswithcartbox {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.coursedescription {
+  text-align: left;
+  box-shadow: 2px 2px 10px grey;
+  width: 70%;
+  padding: 0px 5px 0px 10px;
+}
+.pricingcartwishlist {
+  width: 30%;
+  box-shadow: 2px 2px 10px grey;
+  border-radius: 3px;
+  text-align: left;
+  padding: 10px 0px 10px 30px;
+}
+.detail-buttongroup {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+.addtocartbtn {
+  background-color: #264f73;
+  border-radius: 1px;
+  color: white;
+  height: 28px;
+}

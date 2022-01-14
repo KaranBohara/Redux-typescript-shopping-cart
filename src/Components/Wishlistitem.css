@@ -1,0 +1,39 @@
+.wishlistitem-container {
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: flex-start;
+  box-shadow: 1px 1px 5px grey;
+  margin: 10px 5px;
+  width: 100%;
+}
+
+.wishlist-title {
+  width: 40%;
+}
+
+.wishlist-author {
+  width: 10%;
+}
+
+.wishlist-price {
+  width: 10%;
+}
+
+.addtocart-button {
+  display: flex;
+  background-color: #264f73;
+  font-size: 15px;
+  color: #eff4f5;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 2px;
+}
+.delete-icon {
+  background-color: transparent;
+  border: none;
+}
+.addtocart-button:hover {
+  background-color: #468fcf;
+}
