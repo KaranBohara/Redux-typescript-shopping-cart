@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import addProduct from "../redux/actions/productActions";
 import { useDispatch } from "react-redux";
-// import Cartdetails from "../Components/Cartdetails";
 
 function Homepage() {
   const dispatch = useDispatch();
@@ -13,7 +12,7 @@ function Homepage() {
 
   const [loading, setLoading] = useState(true);
   const fetchproducts = () => {
-    fetch("http://fakestoreapi.com/products")
+    fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((data) => dispatch(addProduct(data)));
       
