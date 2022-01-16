@@ -16,13 +16,7 @@
   width: 100%;
   display:grid;
   grid-template-columns: repeat(4,1fr);
-  gap:1rem;
+  column-gap:1rem;
+  row-gap: 3rem;
 }
 
-.productlist::-webkit-scrollbar {
-  display: none;
-}
-
-.home-cartdetails {
-  width: 30%;
-}

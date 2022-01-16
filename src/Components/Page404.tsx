@@ -1,25 +1,24 @@
 import React from "react";
-import Error from "../images/error-page.png";
+import Error from "../images/404.png";
 import { Link } from "react-router-dom";
 import "./Page404.css";
 
 const Page404 = () => {
   return (
-    <div>
-      <img src={Error} alt="404 page "></img>
-      <h1>Page 404 Not Found</h1>
-      <p>
-        The Page you are looking for doesn't exist or an other error occured.
-      </p>
-      <p>
-        Go back,or head over to
+    <div className="errorpage">
+     <div className="image-error"><img src={Error} alt="404 page" width="80%" height="100%"></img></div>
+     <div className="error-content">
+       <h2>OOPS! PAGE NOT FOUND</h2>
+       <p style={{fontSize:"1.4rem",width:"50%"}}>
+       The page you were looking for could not be found.It might have been removed 
+       ,renamed or did not exist.
         <button className="Page404">
-          <Link to="/" className="Home404">
+          <Link to="/" className="link-remove">
             Home{" "}
           </Link>
         </button>
-        choose a new direction.
-      </p>
+      </p> 
+       </div>
     </div>
   );
 };

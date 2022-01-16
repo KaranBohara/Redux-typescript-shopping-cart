@@ -3,11 +3,20 @@
   flex-direction: column;
   align-items: center;
 }
-
 .cart-list {
   width: 90%;
+  display: flex;
 }
-
+.value
+{
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+.Price{
+  font-size: 1.5rem;
+  color: red;
+  margin: .5rem 0rem;
+}
 .Delete {
   background: inherit;
   border: #fff;
@@ -21,21 +30,42 @@
   margin: 10px;
   padding: 5px;
   justify-content: space-evenly;
-}
-.Move {
-  color: #00f;
-  cursor: pointer;
+  align-items: center;
 }
 .totalprice {
-  display: inline-flex;
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 40%);
+  width: 30%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  margin-top: 1rem;
 }
-
 .cartitems {
   display: flex;
   flex-direction: column;
 }
-
 .cartitem-title {
   width: 30%;
+  display: flex;
+  flex-flow: row;
+  font-weight: bold;
+}
+.red-wishlist {
+  transform: scale(1.6);
+  color: red;
+  cursor: pointer;
+}
+.checkout button
+{
+  width:50%;
+  padding: 1rem 0rem;
+  background-color: #FFB42E;
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  border-radius: .3rem;
+  margin-bottom: 1rem;
 }

@@ -38,3 +38,23 @@
     color: rgb(29, 29, 29);
     text-decoration: none;
 }
+.link-remove-products
+{
+    color: #23527c;
+    text-decoration: none;
+}
+.link-remove-products:active
+{
+    color: #23527c;
+    text-decoration: none;
+}
+.link-remove-products:hover
+{
+    color: #23527c;
+    text-decoration: none;
+}
+.link-remove-products:visited
+{
+    color: #23527c;
+    text-decoration: none;
+}

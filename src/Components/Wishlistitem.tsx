@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
-import "./Wishlistitem.css";
-import DeleteIcon from "../images/delete.png";
-
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { addItemCart } from "../redux/actions/cartActions";
 import { removeItemWishlist } from "../redux/actions/wishlistActions";
 
@@ -9,46 +8,31 @@ function Wishlistitem(props: { key: number; value: any }) {
   const dispatch = useDispatch();
 
   return (
-    <div className="wishlistitem-container">
-      <div className="wishlist-title">
-        <p>
-          <b>{props.value.title}</b>
-        </p>
-        <div className="tagbuttons">
-          {props.value.tags.map((val: string, index: number) => {
-            return <p className="tags">{val}</p>;
-          })}
-        </div>
+    <div className="wishlist-product-container">
+      <div className="product-image-box"><img style={{marginTop:"1rem"}} src={props.value.image} alt={props.value.title}></img>
       </div>
-      <p className="wishlist-author">{props.value.author}</p>
-
-      <p className="wishlist-price">
+      <div className="product-title">
+        <p>
+        <b>{props.value.title}</b>
+        </p>
+      </div>
+      <p className="product-category">{props.value.category}</p>
+      
+      <p className="product-price">
         <b>
-          {props.value.discounted_price
-            ? props.value.discounted_price
-            : props.value.actual_price}
+            ${props.value.price}
         </b>
       </p>
-      <p className="wishlist-price">
-        <s>{props.value.discounted_price ? props.value.actual_price : "-"}</s>
-      </p>
-
-      <img
-        onClick={() => {
-          dispatch(removeItemWishlist(parseInt(props.value.id)));
-        }}
-        src={DeleteIcon}
-        alt="delete"
-      />
-      <button
-        className="addtocart-button"
-        onClick={() => {
+      <div className="cart-delete-container">
+        <LocalMallIcon className="carticon" onClick={() => {
           dispatch(addItemCart(parseInt(props.value.id)));
           dispatch(removeItemWishlist(parseInt(props.value.id)));
-        }}
-      >
-        <span>Add to cart</span>
-      </button>
+        }}/>
+      <DeleteForeverIcon className="deleteicon" onClick={() => {
+          dispatch(removeItemWishlist(parseInt(props.value.id)));
+        }}/>
+      </div>
+      
     </div>
   );
 }

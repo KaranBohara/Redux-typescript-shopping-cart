@@ -1,40 +1,49 @@
 .wishlist-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-
-.wishlist-courses {
+.wishlist-product-container{
+  width:70%;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 1px 1px 5px grey;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.wishlist-image
+{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.wishlist-products {
   display: flex;
   flex-direction: column;
-  width: 70%;
-}
-
-.wishlist-courses-cartdetails {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
-  gap: 10px;
-  margin-top: 5px;
-}
-
-.wishlist-subheader {
-  display: flex;
-  background-color: rgb(113, 178, 187);
-  align-items: flex-start;
-  color: white;
-  height: 50px;
-  width: 90%;
-  padding: 0px 10px;
-  border-radius: 1px;
-}
-
-.cartdetails {
   width: 30%;
-  /* width: auto; */
-  /* position: relative; */
-  /* left: 500px; */
+  overflow: auto;
+  height: 700px;
+  padding-top: 8rem;
+}
+.cart-delete-container
+{
+  width:30%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+.carticon
+{
+  transform: scale(1.6);
+  color: rgb(221, 77, 125);
+  cursor: pointer;
+}
+.deleteicon
+{
+  transform: scale(1.6);
+  color: rgb(185, 0, 0);
+  cursor: pointer;
 }

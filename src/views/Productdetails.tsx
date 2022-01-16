@@ -20,23 +20,22 @@ function Productdetails(props: any) {
     <div className="viewpage">
       <div className="details-container">
         <div className="redirecttohome">
-          <Link to="/">
-            <p>All Products </p>
+          <Link to="/" className="link-remove-products">
+            <p>All Products<span style={{marginLeft:".3rem"}}>&gt;</span></p>
           </Link>
-          <p>
+          <p style={{marginLeft:".3rem"}}>
             {" "}
-            {">"} {props.location.state.title}
+            {props.location.state.category}
           </p>
         </div>
-        <div className="coursenameauthornametags">
-          <h3>{props.location.state.title}</h3>
-          {props.location.state.description}
-         
-        </div>
         <div className="detailswithcartbox">
-          <div className="coursedescription">
-            <p>Product Details</p>
-            <p>{props.location.state.details}</p>
+          <div className="productdescription">
+            <h4 style={{marginTop:"2rem"}}>{props.location.state.title}</h4>
+            <img src={props.location.state.image} alt={props.location.state.title} width="20%" height="50%"/>
+            <p style={{marginTop:"2rem"}}>{props.location.state.description}</p>
+            <p style={{marginTop:"2rem",color:"red"}}>$ {props.location.state.price}</p>
+            <p style={{marginTop:"2rem"}}>Rating: {props.location.state.rating.rate}</p>
+            <p style={{marginTop:"2rem"}}>Items sold: {props.location.state.rating.count}</p>
           </div>
           <div className="pricingcartwishlist">
             <div className="detail-buttongroup">

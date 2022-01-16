@@ -38,9 +38,6 @@ function Homepage() {
             return <Product key={index} obj={val} />;
           })}
         </div>
-        {/* <div className="home-cartdetails">
-          <Cartdetails />
-        </div> */}
       </div>
     </div>
   );

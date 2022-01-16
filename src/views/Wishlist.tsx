@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-
+import wishlistimage from "../images/wish.png";
 import "./Wishlist.css";
-
-import Cartdetails from "../Components/Cartdetails";
 import Wishlistitem from "../Components/Wishlistitem";
 
 function Wishlist() {
@@ -21,18 +19,13 @@ function Wishlist() {
 
   return (
     <div className="wishlist-container">
-      <div className="wishlist-subheader">
-        <p>My Wishlist</p>
+      <div className="wishlist-image">
+        <img src={wishlistimage} alt="wishist" width="60%" height="50%"/>
       </div>
-      <div className="wishlist-courses-cartdetails">
-        <div className="wishlist-courses">
-          {items.map((val: any, index: number) => {
-            return <Wishlistitem key={val.id} value={val} />;
+        <div className="wishlist-products">
+          {items.map((val: any) => {
+            return <Wishlistitem key={val.id} value={val}/>;
           })}
-        </div>
-        <div className="cartdetails">
-          <Cartdetails />
-        </div>
       </div>
     </div>
   );

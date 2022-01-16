@@ -67,7 +67,8 @@ function Product(props: any) {
       
       <div className="product-title">
         <p>
-        <Link className="link-remove-title" to="/productdetails"><b>{props.obj.title}</b></Link>
+        <Link className="link-remove-title" to={{pathname: "/productdetails",
+            state: props.obj,}} ><b>{props.obj.title}</b></Link>
         </p>
       </div>
       <p className="product-category">{props.obj.category}</p>

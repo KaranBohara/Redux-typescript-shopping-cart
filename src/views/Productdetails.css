@@ -6,41 +6,52 @@
 .details-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+  margin-top: 3rem;
 }
 .redirecttohome {
   display: flex;
   justify-content: flex-start;
   padding: 0px 0px 0px 70px;
-  font-size: 23px;
+  font-size: 1.8rem;
 }
 
 .detailswithcartbox {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  gap: 10px;
+ margin-top: 3rem;
 }
-.coursedescription {
+.productdescription {
   text-align: left;
   box-shadow: 2px 2px 10px grey;
   width: 70%;
   padding: 0px 5px 0px 10px;
 }
+.productdescription p{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 .pricingcartwishlist {
-  width: 30%;
-  box-shadow: 2px 2px 10px grey;
+  width: 20%;
   border-radius: 3px;
-  text-align: left;
-  padding: 10px 0px 10px 30px;
+  display: flex;
+  justify-content: flex-start;
 }
 .detail-buttongroup {
-  gap: 30px;
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.detail-buttongroup button {
+  outline: none;
+  border: none;
 }
 .addtocartbtn {
   background-color: #264f73;
-  border-radius: 1px;
+  border-radius: 0.3rem;
   color: white;
-  height: 28px;
+  padding: 1rem 1.5rem;
 }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeallCart, removeItemCart } from "../redux/actions/cartActions";
-import Deleteicon from "../images/delete.png";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import "./Cart.css";
 import { addItemWishlist } from "../redux/actions/wishlistActions";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function Cart() {
   let dispatch = useDispatch();
@@ -23,45 +24,32 @@ function Cart() {
   return (
     <div className="cart-container">
       <div className="sub-header">
-        <h3 className="subheader-title">{cartitems.length} courses in cart</h3>
+        <h3 className="subheader-title">{cartitems.length===0?"No items in Cart":`${cartitems.length} Items in cart`}</h3>
       </div>
 
       <div className="cart-list">
         <div className="cartitems">
-          {cartitems.map((value: any, index: number) => {
-            console.log(value);
-            
+          {cartitems.map((value: any, index: number) => { 
             return (
-              <div className="cartdata">
+              <div className="cartdata" key={index}>
+                <img src={value.image} alt={value.title} width="10%" height="60%"/>
                 <p className="cartitem-title">{value.title}</p>
-                <p
-                  className="Move"
-                  onClick={() => {
+                <FavoriteIcon className="red-wishlist" onClick={() => {
                     dispatch(addItemWishlist(parseInt(value.id)));
                     dispatch(removeItemCart(parseInt(value.id)));
-                  }}
-                >
-                  Move to Wishlist
-                </p>
+                  }}/>
                 <p className="price">
                   <strong>
-                    Rs.
-                    {value.discounted_price
-                      ? value.discounted_price
-                      : value.actual_price}
-                    -/
+                    $
+                    {value.price}
                   </strong>
                 </p>
-                <button className="Delete">
-                  <img
-                    src={Deleteicon}
-                    alt="delete"
-                    onClick={() => {
-                      console.log("vkdsn");
+      
+                  <DeleteForeverIcon className="deleteicon" onClick={() => {
                       dispatch(removeItemCart(parseInt(value.id)));
-                    }}
-                  />
-                </button>
+                    }}/>
+          
+            
               </div>
             );
           })}
@@ -69,11 +57,11 @@ function Cart() {
         <div className="totalprice">
           <div className="value">
             Total Cart Value <br />
-            <div className="Price">
+            <div className="Price">$ 
               {cartitems.reduce((sum: number, val: any) => {
-                if (val.discounted_price)
-                  return sum + parseInt(val.discounted_price);
-                else return sum + parseInt(val.actual_price);
+                if (val.price)
+                  return sum +(val.price);
+                else return sum + (val.price);
               }, 0)}
             </div>
           </div>
