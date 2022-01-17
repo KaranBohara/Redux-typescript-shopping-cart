@@ -13,6 +13,11 @@
   height: 100%;
   width:40%;
 }
+.image-error img 
+{
+  width:80%;
+   height:100%;
+}
 .Page404 {
   background-color: #212529;
   color: #eff4f5;
@@ -32,10 +37,46 @@
   align-items: center;
   height: 100%;
 }
+.error-content p
+{
+  font-size: 1.4rem;
+  width: 50%;
+}
 .error-content button
 {
   outline: none;
   border:none;
   cursor: pointer;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 992px) {
+  .errorpage
+  {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+  }
+  .image-error
+  {
+    width: 100%;
+    justify-content: center;
+  }
+  .image-error img 
+  {
+    width:30%;
+    height: 30%;
+  }
+  .error-content
+  {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 992px) {
+.image-error img 
+{
+  width: 50%;
+  height: 50%;
+}
 }
