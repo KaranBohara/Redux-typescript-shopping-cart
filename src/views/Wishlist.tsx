@@ -20,7 +20,7 @@ function Wishlist() {
   return (
     <div className="wishlist-container">
       <div className="wishlist-image">
-        <img src={wishlistimage} alt="wishist" width="60%" height="50%"/>
+        <img src={wishlistimage} alt="wishist"/>
       </div>
         <div className="wishlist-products">
           {items.map((val: any) => {

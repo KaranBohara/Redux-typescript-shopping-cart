@@ -14,12 +14,13 @@ function Navbar() {
         <Link to="/cart">
           <ShoppingCartIcon className="cart" />
         </Link>
-      </div>
-      <div className="count">
         <Link to="/wishlist">
           <FavoriteBorderIcon className="wishlist" />
         </Link>
       </div>
+      {/* <div className="count">
+       
+      </div> */}
     </div>
   );
 }

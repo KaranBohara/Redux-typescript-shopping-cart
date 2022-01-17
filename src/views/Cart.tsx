@@ -32,23 +32,23 @@ function Cart() {
           {cartitems.map((value: any, index: number) => { 
             return (
               <div className="cartdata" key={index}>
-                <img src={value.image} alt={value.title} width="10%" height="60%"/>
+                <img src={value.image} alt={value.title}/>
                 <p className="cartitem-title">{value.title}</p>
-                <FavoriteIcon className="red-wishlist" onClick={() => {
-                    dispatch(addItemWishlist(parseInt(value.id)));
-                    dispatch(removeItemCart(parseInt(value.id)));
-                  }}/>
                 <p className="price">
                   <strong>
                     $
                     {value.price}
                   </strong>
                 </p>
-      
+                <div className="wishicons-delete">
+                <FavoriteIcon className="red-wishlist" onClick={() => {
+                    dispatch(addItemWishlist(parseInt(value.id)));
+                    dispatch(removeItemCart(parseInt(value.id)));
+                  }}/>
                   <DeleteForeverIcon className="deleteicon" onClick={() => {
                       dispatch(removeItemCart(parseInt(value.id)));
                     }}/>
-          
+          </div>
             
               </div>
             );

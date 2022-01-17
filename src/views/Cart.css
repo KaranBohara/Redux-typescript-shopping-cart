@@ -28,9 +28,13 @@
   display: flex;
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 40%);
   margin: 10px;
-  padding: 5px;
   justify-content: space-evenly;
   align-items: center;
+}
+.cartdata img 
+{
+  width:10%;
+  height: 80%;
 }
 .totalprice {
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 40%);
@@ -58,7 +62,7 @@
 }
 .checkout button
 {
-  width:50%;
+  width:90%;
   padding: 1rem 0rem;
   background-color: #FFB42E;
   cursor: pointer;
@@ -68,4 +72,72 @@
   border: none;
   border-radius: .3rem;
   margin-bottom: 1rem;
+}
+.wishicons-delete
+{
+  width: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .wishicons-delete
+  {
+    margin: 1rem 0rem;
+    width: 20%;
+  }
+  .cart-list
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout button 
+  {
+    width: 100%;
+  }
+  .totalprice
+  {
+    padding:0rem 1rem;
+  }
+  .value
+  {
+    width: 95%;
+  }
+  .cartdata p
+  {
+    width:90%;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cart-list
+  {
+    width: 100%;
+  }
+  .cartitems
+  {
+    width:95%;
+  }
+  .cartdata
+  {
+    flex-direction: column;
+  }
+  .cartdata p
+  {
+    width:90%;
+  }
+  .totalprice
+  {
+  width: 95%;
+  }
+  .wishicons-delete
+  {
+    width:30%
+  }
+}
+@media screen and (max-width: 592px) {
+  .wishicons-delete
+  {
+    width:50%
+  }
 }
