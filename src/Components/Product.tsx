@@ -84,11 +84,11 @@ function Product(props: any) {
       </div>
       <div className="cartbutton-group">
         {isCarted ? (
-          <button  onClick={addcartbutton}>
+          <button className="add-product-button"  onClick={addcartbutton}>
             Add To Cart
           </button>
         ) : (
-          <button onClick={removecartbutton}>
+          <button className="remove-product-button" onClick={removecartbutton}>
             Remove From Cart
           </button>
         )}

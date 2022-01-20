@@ -71,7 +71,6 @@ justify-content: flex-end;
   border: none;
   padding: 1rem 0rem;
   justify-content: center;
-  background-color: #FFB42E;
   cursor: pointer;
   color: white;
   font-size: 1.6rem;
@@ -79,4 +78,12 @@ justify-content: flex-end;
 }
 .cartbutton-group button:hover {
   background-color: #468fcf;
+}
+.add-product-button
+{
+  background-color: #FFB42E;
+}
+.remove-product-button
+{
+  background-color: rgb(27, 134, 0);
 }

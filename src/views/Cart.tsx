@@ -8,11 +8,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function Cart() {
   let dispatch = useDispatch();
-
   const cart = useSelector((state: any) => state.cart);
   const allproducts = useSelector((state: any) => state.allproducts);
+  const qty=useSelector((count:number)=>count)
   const [cartitems, setCartitems] = useState([]);
-
   useEffect(() => {
     let items = allproducts.filter((item: any) => {
       if (cart.indexOf(parseInt(item.id)) !== -1) return true;
@@ -40,6 +39,7 @@ function Cart() {
                     {value.price}
                   </strong>
                 </p>
+                <input type="number" value={qty} max={10}></input>
                 <div className="wishicons-delete">
                 <FavoriteIcon className="red-wishlist" onClick={() => {
                     dispatch(addItemWishlist(parseInt(value.id)));

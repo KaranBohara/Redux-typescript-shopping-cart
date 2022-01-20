@@ -22,10 +22,12 @@ function Wishlist() {
       <div className="wishlist-image">
         <img src={wishlistimage} alt="wishist"/>
       </div>
+      <div className="wishlist-frame">
         <div className="wishlist-products">
           {items.map((val: any) => {
             return <Wishlistitem key={val.id} value={val}/>;
           })}
+      </div>
       </div>
     </div>
   );

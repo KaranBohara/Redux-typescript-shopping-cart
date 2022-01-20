@@ -1,10 +1,10 @@
 export default function cartReducers(
   state: number[] = [],
-  action: { type: string; id: string }
+  action: { type: string; id: string },
 ) {
   switch (action.type) {
     case "additemcart":
-      return [...state, parseInt(action.id)];
+      return [...state, parseInt(action.id)]; 
     case "removeitemcart":
       var index = state.indexOf(parseInt(action.id));
       if (index !== -1) {
