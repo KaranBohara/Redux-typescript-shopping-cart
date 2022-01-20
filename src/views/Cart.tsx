@@ -39,7 +39,7 @@ function Cart() {
                     {value.price}
                   </strong>
                 </p>
-                <input type="number" value={qty} max={10}></input>
+                {/* <input type="number" value={qty} max={10}></input> */}
                 <div className="wishicons-delete">
                 <FavoriteIcon className="red-wishlist" onClick={() => {
                     dispatch(addItemWishlist(parseInt(value.id)));
