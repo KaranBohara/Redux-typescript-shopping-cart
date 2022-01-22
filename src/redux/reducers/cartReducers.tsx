@@ -1,6 +1,7 @@
 export default function cartReducers(
   state: number[] = [],
   action: { type: string; id: string },
+  qty:number=0,
 ) {
   switch (action.type) {
     case "additemcart":
